@@ -1,0 +1,113 @@
+@import url(/styles/mixin.css);
+:root {
+  --age18-color: blueviolet;
+  --age16-color: red;
+  --age14-color: gold;
+  --age12-color: greenyellow;
+  --text-color: white;
+  --position-center: center;
+}
+:root body {
+  background-color: gray;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.game-block {
+  border-radius: 25px;
+  overflow: hidden;
+  height: 450px;
+  min-width: 400px;
+}
+.game-block__lable {
+  display: none;
+}
+.game-block__square {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.game-block__square--rdr2 {
+  background-image: url(/rdr2.jpg);
+}
+.game-block__square--gow {
+  background-image: url(/God_of_War.jpg);
+}
+.game-block__square--wh40 {
+  background-image: url(/wh40.jpg);
+}
+.game-block__square--doom {
+  background-image: url(/doom.jpg);
+}
+.game-block__square--nfs {
+  background-image: url(/nfs.jpg);
+}
+.game-block__square--dg {
+  background-image: url(/days_gone.jpg);
+}
+.game-block__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: var(--position-center);
+  color: var(--text-color);
+  font-size: 18px;
+  padding: 10px;
+}
+.game-block__raiting {
+  height: 80px;
+  width: 80px;
+  margin-top: 10px;
+  border-radius: 50%;
+  text-align: var(--position-center);
+  align-content: var(--position-center);
+  font-size: 36px;
+  font-weight: 700;
+}
+.game-block__raiting--rdr2 {
+  color: var(--age18-color);
+  border: 5px solid var(--age18-color);
+}
+.game-block__raiting--gow {
+  color: var(--age18-color);
+  border: 5px solid var(--age18-color);
+}
+.game-block__raiting--wh40 {
+  color: var(--age14-color);
+  border: 5px solid var(--age14-color);
+}
+.game-block__raiting--doom {
+  color: var(--age16-color);
+  border: 5px solid var(--age16-color);
+}
+.game-block__raiting--nfs {
+  color: var(--age12-color);
+  border: 5px solid var(--age12-color);
+}
+.game-block__raiting--dg {
+  color: var(--age16-color);
+  border: 5px solid var(--age16-color);
+}
+.game-block__btn-start {
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+  border-radius: 25px;
+  font-size: 36px;
+  width: 90%;
+  margin: 10px auto;
+  background-color: transparent;
+  cursor: pointer;
+}
+.game-block__btn-start:hover {
+  scale: 1.4;
+  border: none;
+  transition: 1s;
+}/*# sourceMappingURL=style.css.map */

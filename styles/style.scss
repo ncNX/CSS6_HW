@@ -1,0 +1,153 @@
+@import url(/styles/mixin.css);
+
+:root {
+	--age18-color: blueviolet;
+	--age16-color: red;
+	--age14-color: gold;
+	--age12-color: greenyellow;
+	--text-color: white;
+	--position-center: center;
+
+	body {
+		background-color: gray;
+	}
+ }
+
+
+ @mixin displayMode($display) {
+	display: $display;
+ }
+
+ @mixin placeContent($justify) {
+	justify-content: $justify;
+ }
+
+ @mixin fontSize($size) {
+	font-size: $size;
+ }
+
+ @mixin radius($size) {
+	border-radius: $size
+ }
+
+ .container {
+	@include displayMode(flex);
+	@include placeContent(center);
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+.game-block {
+	@include radius(25px);
+	overflow: hidden;
+	height: 450px;
+	min-width: 400px;
+
+	&__lable {
+		@include displayMode(none)
+	}
+
+	&__square {
+		height: 100%;
+
+		@include displayMode(flex);
+		flex-direction: column;
+		@include placeContent(space-between);
+	
+	
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: cover;
+
+		&--rdr2 {
+			background-image: url(/rdr2.jpg);
+		}
+
+		&--gow {
+			background-image: url(/God_of_War.jpg);
+		}
+
+		&--wh40 {
+			background-image: url(/wh40.jpg);
+		}
+
+		&--doom {
+			background-image: url(/doom.jpg);
+		}
+
+		&--nfs {
+			background-image: url(/nfs.jpg);
+		}
+
+		&--dg {
+			background-image: url(/days_gone.jpg);
+		}
+	}
+	&__head {
+		@include displayMode(flex);
+		@include placeContent(space-between);
+		align-items: var(--position-center);
+		color: var(--text-color);
+		@include fontSize(18px);
+		padding: 10px;
+	}
+
+	&__raiting {
+		height: 80px;
+			width: 80px;
+			margin-top: 10px;
+			@include radius(50%);
+			text-align: var(--position-center);
+			align-content: var(--position-center);
+			@include fontSize(36px);
+			font-weight: 700;
+
+			&--rdr2 {
+				color: var(--age18-color);
+				border: 5px solid var(--age18-color);
+			};
+
+			&--gow {
+				color: var(--age18-color);
+				border: 5px solid var(--age18-color);
+			}
+	
+			&--wh40 {
+				color: var(--age14-color);
+				border: 5px solid var(--age14-color);
+			}
+	
+			&--doom {
+				color: var(--age16-color);
+				border: 5px solid var(--age16-color);
+			}
+				
+			&--nfs {
+				color: var(--age12-color);
+				border: 5px solid var(--age12-color);
+			}	
+	
+			&--dg {
+				color: var(--age16-color);
+				border: 5px solid var(--age16-color);	
+			}
+	}
+
+	&__btn-start {
+
+		color: var(--text-color);
+		border: 2px solid var(--text-color);
+		@include radius(25px);
+		@include fontSize(36px);
+		width: 90%;
+		margin: 10px auto;
+		background-color: transparent;
+		cursor: pointer;
+		}
+		&__btn-start:hover {
+			scale: 1.4;
+			border: none;
+			transition: 1s;
+		}
+	}
+	
